@@ -23,17 +23,6 @@ const connection = mysql.createConnection({
     port : 3306
   });
 
-  
-/*
-const connection = mysql.createConnection({
-    host: "db4free.net",
-    user: "vcentry24",
-    password: "karthick",
-    database: "travelixvcentry",
-    port: 3306
-});
-  */
-
 connection.connect((error) => {
     if (error) {
         throw error;
@@ -175,17 +164,3 @@ const port = process.env.PORT || 4000;
 server.listen(port, () => {
     console.log("Node JS is running on port", port);
 })
-
-
-
-
-/*
-create database travelix;
-===================================
-use travelix;
-create table destinationList (destinationName varchar(255), destinationImage longtext, destinationCount varchar(255), id int not null auto_increment, primary key(id));
-===================================
-use travelix;
-create table hotelList (hotelName varchar(255), hotelImage longtext, hotelLocation varchar(255), hotelPrice varchar(255), id int not null auto_increment, primary key(id));
-
-*/
